@@ -1,3 +1,16 @@
-<h1>Welcome to Your Fitness Dashboard, {{ request.user.username }}!</h1>
-<p>Track your daily goals and weekly progress here.</p>
-<a href="{% url 'logout' %}">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Your Fitness Dashboard, {{ request.user.username }}!</h1>
+    <p>Track your daily goals and weekly progress here.</p>
+    
+    <!-- Navigation Links -->
+    <a href="{% url 'profile' %}" style="display: inline-block; margin: 10px; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">My Profile</a>
+    <a href="{% url 'logout' %}" style="display: inline-block; margin: 10px; padding: 10px 15px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px;">Logout</a>
+</body>
+</html>
